@@ -1,5 +1,7 @@
 # Bank Marketing MLOps Pipeline
 
+[![MLOps pipeline](https://github.com/civiltruckingllc-aiml/bank-marketing-mlops/actions/workflows/mlops.yml/badge.svg)](https://github.com/civiltruckingllc-aiml/bank-marketing-mlops/actions/workflows/mlops.yml)
+
 A reproducible classification pipeline demonstrating Git, DVC, MLflow, pytest,
 GitHub Actions, and Evidently. Predict whether a bank customer will subscribe
 to a term deposit using information available before a marketing call.
@@ -61,6 +63,11 @@ was not previously contacted and is preserved as a valid domain value.
 
 Use **Python 3.12** and Git. Python 3.14 is not supported by these pins.
 Clone this repository, change into its root, then create a virtual environment.
+
+```bash
+git clone https://github.com/civiltruckingllc-aiml/bank-marketing-mlops.git
+cd bank-marketing-mlops
+```
 
 Windows PowerShell:
 
@@ -252,27 +259,21 @@ artifacts expire after 30 days; download or regenerate them when needed.
 This is an automated validation and training pipeline. It does not deploy a
 public prediction service or automatically retrain when drift is detected.
 
-## Publishing and final submission
+## Final submission
 
-Create a **public** repository named **bank-marketing-mlops** under your GitHub
-account without auto-generating a README. From this folder:
+Public repository: **https://github.com/civiltruckingllc-aiml/bank-marketing-mlops**
 
-```bash
-git add .
-git commit -m "Build complete bank marketing MLOps pipeline"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/bank-marketing-mlops.git
-git push -u origin main
-```
+Submit that repository URL. The local project archive is an optional download;
+the public repository is the requested deliverable. Review the live status
+badge above or the [Actions history](https://github.com/civiltruckingllc-aiml/bank-marketing-mlops/actions)
+for hosted verification. Each successful training job makes its five MLflow
+runs, model artifacts, and drift reports available in the workflow artifacts.
 
-Replace YOUR_USERNAME with your actual GitHub username. If a remote already
-exists, inspect `git remote -v` rather than adding another one. Repository
-creation, push, and a green Actions run must actually finish before submission.
-
-Open the Actions tab, inspect **MLOps pipeline**, and confirm both jobs are
-green. If GitHub requires enabling Actions or approving a first workflow run,
-complete that account step and rerun the workflow. Submit the public repository
-URL; the local project archive is not a substitute.
+Verified successful hosted run:
+[MLOps pipeline #1](https://github.com/civiltruckingllc-aiml/bank-marketing-mlops/actions/runs/38840303736).
+Both **test** and **train** passed, including all 22 tests, five training
+experiments, holdout gates, and both monitoring checks. Documentation-only
+publication updates use `[skip ci]`; the linked run tested the pipeline code.
 
 ## Verification evidence
 
@@ -286,7 +287,7 @@ URL; the local project archive is not a substitute.
 | Selected holdout average precision | 0.4342 |
 | Baseline monitoring | 0/15 drifting features; exit 0 |
 | Shifted monitoring | 4/15 drifting features (26.67%); exit 1 |
-| Public GitHub repository / Actions run | Pending publication; no hosted run claimed |
+| Public GitHub repository / Actions run | Published; both jobs passed in linked hosted run #1 |
 
 Measured local results are recorded in `reports/verification.json`,
 `reports/experiment_comparison.csv`, `reports/holdout_metrics.json`, and

@@ -53,10 +53,20 @@
   "dependency_check": "passed",
   "workflow_structure_check": "passed",
   "github": {
-    "public_repository_url": null,
-    "actions_run_url": null,
-    "actions_status": "not_run",
-    "publication_status": "pending; GitHub installed but repository tools not exposed in this session"
+    "public_repository_url": "https://github.com/civiltruckingllc-aiml/bank-marketing-mlops",
+    "actions_run_url": "https://github.com/civiltruckingllc-aiml/bank-marketing-mlops/actions/runs/38840303736",
+    "actions_run_id": 38840303736,
+    "tested_commit": "bac534edf686851223cf35932ffd384fe17a8181",
+    "actions_status": "completed",
+    "actions_conclusion": "success",
+    "jobs": {
+      "test": "success",
+      "train": "success"
+    },
+    "hosted_pytest_passed": 22,
+    "publication_status": "published; public repository and hosted pipeline verified",
+    "evidence_artifact": "mlops-training-evidence",
+    "note": "Local run IDs above identify the separately retained local evidence; CI artifacts contain five independently executed hosted runs."
   },
   "limits": [
     "Local checks do not substitute for a successful GitHub-hosted Actions run.",

@@ -62,6 +62,7 @@ $LASTEXITCODE
 Baseline should exit **0**. Drifted should exit **1**, which is the intended
 alert. Open `reports/drift_report.html` by double-clicking it.
 
-10. Follow README.md for publishing and the GitHub Actions check. Your final
-    submission is the public GitHub repository URL. A downloaded ZIP alone is
-    not the required submission.
+10. Your project is published at
+    https://github.com/civiltruckingllc-aiml/bank-marketing-mlops . Review its
+    Actions tab and README. Submit this public repository URL; a downloaded
+    ZIP alone is not the required submission.
