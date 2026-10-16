@@ -1,0 +1,11 @@
+md5: ab5a0618c372e2ad65ceee29fb44bd72
+frozen: true
+deps:
+- checksum: '"cf518982f1331d5ed82cc6200750fd15251eaa4b85bc3384dac15699de1dc7aa"'
+  size: 4610348
+  hash: md5
+  path: 
+    https://raw.githubusercontent.com/PacktWorkshops/The-Machine-Learning-Workshop/7be1026fb864828ab302074b1f12ab4c25ad73c7/Chapter06/bank-full.csv
+outs:
+- hash: md5
+  path: bank-full.csv

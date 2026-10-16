@@ -1,0 +1,119 @@
+{
+  "mode": "baseline",
+  "reference_rows": 27126,
+  "current_rows": 3000,
+  "features_checked": 15,
+  "drifted_features": [],
+  "drift_share": 0.0,
+  "threshold": 0.2,
+  "alert": false,
+  "rule": "alert if drift_share > threshold",
+  "per_feature": {
+    "age": {
+      "drift_detected": false,
+      "score": 0.028547089873708992,
+      "method": "Wasserstein distance (normed)",
+      "reference_missing_share": 0.019870235198702353,
+      "current_missing_share": 0.017666666666666667
+    },
+    "balance": {
+      "drift_detected": false,
+      "score": 0.0331959011281298,
+      "method": "Wasserstein distance (normed)",
+      "reference_missing_share": 0.020128290201282904,
+      "current_missing_share": 0.02
+    },
+    "day": {
+      "drift_detected": false,
+      "score": 0.0346691189478192,
+      "method": "Wasserstein distance (normed)",
+      "reference_missing_share": 0.0,
+      "current_missing_share": 0.0
+    },
+    "campaign": {
+      "drift_detected": false,
+      "score": 0.015836301302428937,
+      "method": "Wasserstein distance (normed)",
+      "reference_missing_share": 0.0,
+      "current_missing_share": 0.0
+    },
+    "pdays": {
+      "drift_detected": false,
+      "score": 0.02576802497115234,
+      "method": "Wasserstein distance (normed)",
+      "reference_missing_share": 0.0,
+      "current_missing_share": 0.0
+    },
+    "previous": {
+      "drift_detected": false,
+      "score": 0.023834829548406523,
+      "method": "Wasserstein distance (normed)",
+      "reference_missing_share": 0.0,
+      "current_missing_share": 0.0
+    },
+    "job": {
+      "drift_detected": false,
+      "score": 0.023712812835562338,
+      "method": "Jensen-Shannon distance",
+      "reference_missing_share": 0.006598835065988351,
+      "current_missing_share": 0.005666666666666667
+    },
+    "marital": {
+      "drift_detected": false,
+      "score": 0.0077486816342565296,
+      "method": "Jensen-Shannon distance",
+      "reference_missing_share": 0.0,
+      "current_missing_share": 0.0
+    },
+    "education": {
+      "drift_detected": false,
+      "score": 0.005920562975377161,
+      "method": "Jensen-Shannon distance",
+      "reference_missing_share": 0.040551500405515,
+      "current_missing_share": 0.043333333333333335
+    },
+    "default": {
+      "drift_detected": false,
+      "score": 3.0122751088398603e-05,
+      "method": "Jensen-Shannon distance",
+      "reference_missing_share": 0.0,
+      "current_missing_share": 0.0
+    },
+    "housing": {
+      "drift_detected": false,
+      "score": 0.015040272972390266,
+      "method": "Jensen-Shannon distance",
+      "reference_missing_share": 0.0,
+      "current_missing_share": 0.0
+    },
+    "loan": {
+      "drift_detected": false,
+      "score": 0.009694592453818707,
+      "method": "Jensen-Shannon distance",
+      "reference_missing_share": 0.0,
+      "current_missing_share": 0.0
+    },
+    "contact": {
+      "drift_detected": false,
+      "score": 0.0012285462124253068,
+      "method": "Jensen-Shannon distance",
+      "reference_missing_share": 0.2871783528717835,
+      "current_missing_share": 0.286
+    },
+    "month": {
+      "drift_detected": false,
+      "score": 0.023759040600535866,
+      "method": "Jensen-Shannon distance",
+      "reference_missing_share": 0.0,
+      "current_missing_share": 0.0
+    },
+    "poutcome": {
+      "drift_detected": false,
+      "score": 0.05059826912010787,
+      "method": "Jensen-Shannon distance",
+      "reference_missing_share": 0.8198776081987761,
+      "current_missing_share": 0.811
+    }
+  },
+  "caution": "Input drift is not proof of performance decline; simulated labels are not valid after feature edits."
+}

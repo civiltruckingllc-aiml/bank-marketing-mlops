@@ -1,0 +1,65 @@
+{
+  "python": "3.12.14",
+  "dataset": {
+    "rows": 45211,
+    "input_features": 15,
+    "md5": "e6b0ca77f3f200ec5428e04dd104da53",
+    "matches_uci_original_bytes": true
+  },
+  "clean_git_clone_dvc_pull": "passed",
+  "pytest": {
+    "total": 22,
+    "passed": 22,
+    "command": "pytest tests/ -v"
+  },
+  "mlflow": {
+    "finished_runs": 5,
+    "all_models_loadable_after_relocation": true,
+    "best_validation_run": {
+      "run_id": "0ead2f96c71a4dce8f26f6fb13b0e875",
+      "run_name": "forest-depth-14",
+      "primary_metric": "val_roc_auc",
+      "score": 0.7775508483886489,
+      "data_version": "e6b0ca77f3f200ec5428e04dd104da53",
+      "runs_compared": 5,
+      "batch_id": "a54434dae9234a3c88fe7f998a91203e"
+    }
+  },
+  "holdout": {
+    "run_id": "0ead2f96c71a4dce8f26f6fb13b0e875",
+    "rows": 9043,
+    "metrics": {
+      "roc_auc": 0.7846017994514762,
+      "average_precision": 0.43419333497071877,
+      "accuracy": 0.8519296693575141,
+      "f1": 0.46116700201207245,
+      "precision": 0.401541695865452,
+      "recall": 0.5415879017013232
+    },
+    "note": "Held out from training and experiment selection; simulated project evaluation only."
+  },
+  "monitoring": {
+    "baseline_exit_code": 0,
+    "baseline_drift_share": 0.0,
+    "drifted_exit_code": 1,
+    "drifted_share": 0.26666666666666666,
+    "drifted_features": [
+      "age",
+      "balance",
+      "campaign",
+      "contact"
+    ]
+  },
+  "dependency_check": "passed",
+  "workflow_structure_check": "passed",
+  "github": {
+    "public_repository_url": null,
+    "actions_run_url": null,
+    "actions_status": "not_run",
+    "publication_status": "pending; GitHub installed but repository tools not exposed in this session"
+  },
+  "limits": [
+    "Local checks do not substitute for a successful GitHub-hosted Actions run.",
+    "No deployed prediction service."
+  ]
+}

@@ -1,0 +1,53 @@
+project:
+  experiment_name: bank-marketing-mlops
+  random_state: 42
+paths:
+  dataset: data/raw/bank-full.csv
+  dvc_pointer: data/raw/bank-full.csv.dvc
+  tracking_dir: artifacts/mlflow
+  model_dir: artifacts/models
+  reports_dir: reports
+data:
+  # Fixed-commit publisher mirror, verified byte-identical to UCI bank-full.csv.
+  source_url: https://raw.githubusercontent.com/PacktWorkshops/The-Machine-Learning-Workshop/7be1026fb864828ab302074b1f12ab4c25ad73c7/Chapter06/bank-full.csv
+  original_source_url: https://archive.ics.uci.edu/static/public/222/bank+marketing.zip
+  expected_dataset_md5: e6b0ca77f3f200ec5428e04dd104da53
+  target: y
+  numeric_features: [age, balance, day, campaign, pdays, previous]
+  categorical_features: [job, marital, education, default, housing, loan, contact, month, poutcome]
+  # duration leaks post-call information into a pre-call prediction.
+  excluded_features: [duration]
+  missing_numeric_features: [age, balance]
+  simulated_missing_fraction: 0.02
+  test_size: 0.20
+  validation_size: 0.20
+preprocessing:
+  numeric_imputation: median
+  categorical_imputation: most_frequent
+  unknown_categories: ignore
+model:
+  type: random_forest
+  params:
+    n_estimators: 120
+    max_depth: 10
+    min_samples_leaf: 5
+    class_weight: balanced
+    n_jobs: 2
+evaluation:
+  primary_metric: roc_auc
+  decision_threshold: 0.50
+  min_roc_auc: 0.70
+  min_average_precision: 0.20
+monitoring:
+  drift_share_threshold: 0.20
+  numeric_method: wasserstein
+  categorical_method: jensenshannon
+  statistical_threshold: 0.10
+  current_size: 3000
+  random_state: 123
+  shifts:
+    age_add: 20
+    balance_add: 10000
+    campaign_add: 8
+    contact_value: telephone
+    contact_fraction: 0.90

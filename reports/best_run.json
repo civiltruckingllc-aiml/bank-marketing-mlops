@@ -1,0 +1,9 @@
+{
+  "run_id": "0ead2f96c71a4dce8f26f6fb13b0e875",
+  "run_name": "forest-depth-14",
+  "primary_metric": "val_roc_auc",
+  "score": 0.7775508483886489,
+  "data_version": "e6b0ca77f3f200ec5428e04dd104da53",
+  "runs_compared": 5,
+  "batch_id": "a54434dae9234a3c88fe7f998a91203e"
+}

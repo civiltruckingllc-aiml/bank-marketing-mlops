@@ -1,0 +1,16 @@
+-c constraints.txt
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.15.2
+scikit-learn==1.6.1
+PyYAML==6.0.2
+mlflow==2.22.0
+dvc==3.67.1
+evidently==0.6.7
+pytest==8.3.5
+requests==2.32.3
+pathspec==0.12.1
+pydantic==2.10.6
+SQLAlchemy==2.0.40
+setuptools==75.8.2
+pyarrow==17.0.0
